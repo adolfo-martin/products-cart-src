@@ -1,0 +1,18 @@
+:host {
+    display: flex;
+    background-color: lightblue;
+}
+
+.title {
+    flex-grow: 1;
+}
+
+.products-summary {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 0.5rem;
+}
+
+.products-summary > .label {
+    text-align: right;
+}
