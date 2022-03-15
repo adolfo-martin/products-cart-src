@@ -9,6 +9,9 @@
         <tr *ngFor="let product of products">
             <td>{{product.name}}</td>
             <td>{{product.price}}</td>
+            <td>
+                <input type="button" value="Añadir" (click)="addProductToCart(product.uuid)">
+            </td>
         </tr>
     </tbody>
 </table>

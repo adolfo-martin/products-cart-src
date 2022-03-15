@@ -14,7 +14,7 @@ export class ProductsService {
     return this._productsRepository.retrieveProducts$()
   }
 
-  public retrieveProductsByUuid(uuid: ProductUuid): Observable<Product | undefined> {
+  public retrieveProductsByUuid$(uuid: ProductUuid): Observable<Product | undefined> {
     return this._productsRepository.retrieveProductByUuid$(uuid)
   }
 }
