@@ -4,7 +4,7 @@
     <div class="label">Cantidad de productos:</div>
     <div class="value">{{ productsTotalQuantity$ | async }}</div>
     <div class="label">Importe total:</div>
-    <div class="value">{{ productsTotalPrice$ | async }}</div>
+    <div class="value">{{ productsTotalPrice$ | async | number: '.2' }}</div>
 </div>
 
 <a routerLink="/cart">

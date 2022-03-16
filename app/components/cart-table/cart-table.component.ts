@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { Product } from '../../repositories/product';
 import { CartStateI } from '../../store/cart/cart-state-i';
 import { products } from '../../store/cart/cart-selectors'
+import { RemoveProductAction } from '../../store/cart/cart-actions';
 
 @Component({
   selector: 'cart-table',
@@ -18,6 +19,10 @@ export class CartTableComponent implements OnInit {
 
   ngOnInit(): void {
     this.products$ = this._store.select(products)
+  }
+
+  removeProductFromCart(productUuid: string) {
+    this._store.dispatch(new RemoveProductAction(productUuid))
   }
 
 }

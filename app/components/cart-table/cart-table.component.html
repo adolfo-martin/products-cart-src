@@ -6,7 +6,9 @@
     </thead>
     <tbody>
         <tr *ngFor="let product of products">
-            <td>{{product.name}}</td>
+            <td>{{ product.name }}</td>
+            <td>{{ product.price| number: '.2' }}</td>
+            <td><input type="button" value="Quitar" (click)="removeProductFromCart(product.uuid)"></td>
         </tr>
     </tbody>
 </table>
