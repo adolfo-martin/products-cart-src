@@ -1,6 +1,10 @@
 import { createFeatureSelector, createSelector } from '@ngrx/store'
 import { ProductItemI } from './product-item-i'
 
+export const products = createSelector(
+    createFeatureSelector('cartItems'),
+    (cart: ProductItemI[]) => cart
+)
 
 export const productsTotalQuantitySelector = createSelector(
     createFeatureSelector('cartItems'),

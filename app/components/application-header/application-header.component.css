@@ -1,6 +1,8 @@
 :host {
     display: flex;
+    gap: 1rem;
     background-color: lightblue;
+    padding: 1rem;
 }
 
 .title {
@@ -15,4 +17,8 @@
 
 .products-summary > .label {
     text-align: right;
+}
+
+.logo {
+    height: 100px;
 }
